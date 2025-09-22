@@ -22,7 +22,7 @@ li a:hover{
   color: #0079e4;
 }
 
-input[type="text"], input[type="button"] {
+input[type="text"], input[type="submit"] {
     font-family: Arial, Helvetica, sans-serif;
     height: 40px;
     padding: 0 15px;
@@ -38,7 +38,7 @@ input[type="text"] {
 }
 
 /* Specifiek voor de knop */
-input[type="button"] {
+input[type="submit"] {
     background-color: #0079e4;
     color: white;
     border: none;
