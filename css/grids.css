@@ -78,31 +78,113 @@
     grid-row: 2 / 3;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
     .grid {
         position: absolute;
         top: 0px;
         left: 0px;
         right: 0px;
         display: grid;
-        grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 25px 6rem;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: 25px 6rem ;
     }
 
-    .backgroundcolor { visibility: hidden}
+    .backgroundcolor {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3; 
+        visibility: hidden
+    }
     .menu { 
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
         visibility: hidden;
     }
     .search { 
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
         visibility: hidden
     }
-    .bluebar { }
-    .contact { visibility: hidden}
+    .bluebar { 
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        height: 25px;
+    }
+    .contact { 
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        visibility: hidden
+    }
     .logo { 
         grid-column: 1 / 2;
         grid-row: 2 / 3;
     }
-    .gridhome { }
+    .gridhome {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 8rem 1fr;
+    } 
     .header { }
     .content { }
+    .burger {
+        display: flex; /* burger verschijnt */
+        flex-direction: column;
+        gap: 4px;
+        cursor: pointer;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+    }
+
+    .burger span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #000;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .burger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .mobile-menu {
+        flex-direction: column;
+        display: none;
+        align-items: center;
+        position: absolute;
+        top: 8rem; /* onder header */
+        left: 0;
+        right: 0;
+        background-color: #0079e4;
+        z-index: 1000;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    /* Verberg desktop menu */
+    .menu {
+        display: none;
+    }
 }
