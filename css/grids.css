@@ -6,8 +6,16 @@
     height: 12rem;
     position: absolute;
     display: grid;
-    grid-template-columns: 6fr 5fr 15fr 5fr 6fr;
+    grid-template-columns: 6fr 5fr 15fr 6fr 5fr;
     grid-template-rows: 1.5fr 3fr 3fr;
+}
+
+
+.backgroundcolor{
+    grid-column: 1 / 6;
+    grid-row: 2 / 4;  
+    background-color: rgba(248, 248, 248, 0.648); 
+    z-index: -3;
 }
 
 .menu{
@@ -48,4 +56,25 @@
     align-items: center;
     justify-content: center;
     display: flex;
+}
+
+.gridhome{
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100vh;
+    position: absolute; 
+    display: grid;
+    grid-template-columns: 6fr 27fr 5fr;
+    grid-template-rows: 12rem 40rem;
+}
+
+.header{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+}
+
+.content{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
