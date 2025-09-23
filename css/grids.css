@@ -2,7 +2,7 @@
     top: 0px;
     left: 0px;
     right: 0px;
-    width: 100vw;
+    width: 99.99vw;
     height: 12rem;
     position: absolute;
     display: grid;
@@ -15,6 +15,11 @@
     grid-row: 2 / 4;
     background-color: rgba(248, 248, 248, 0.648);
     z-index: -3;
+}
+
+.content{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3; 
 }
 
 .menu {
@@ -64,11 +69,16 @@
     height: 100vh;
     position: absolute;
     display: grid;
-    grid-template-columns: 6fr 27fr 5fr;
-    grid-template-rows: 12rem 40rem;
+    grid-template-columns: 6fr 26fr 6fr;
+    grid-template-rows: 12rem 40rem 20rem;
 }
 
-.header {
+#footer{
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;  
+}
+
+#header {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
 }
